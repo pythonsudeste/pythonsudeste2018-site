@@ -77,7 +77,7 @@ agenda:
 
   - hour: '10:45'
     tracks:
-      - name: 'Keynote'
+      - name: 'Python Moderno'
         speaker: 'Cássio Botaro'
         tags:
           - track-ada
@@ -85,9 +85,9 @@ agenda:
 
   - hour: 'Almoço &nbsp;&nbsp;<i class="fa fa-utensils" aria-hidden="true"></i>'
     tracks:
-      - name: '11:30 - <span class="track label-purple">Sala Dorothy Vaughan</span>'
-      - name: '11:35 - <span class="track label-pink">Sala Grace Hooper</span>'
-      - name: '11:55 - <span class="track label-red">Sala Ada Lovelace</span>'
+      - name: '11:20 - <span class="track label-purple">Sala Dorothy Vaughan</span>'
+      - name: '11:25 - <span class="track label-pink">Sala Grace Hooper</span>'
+      - name: '11:45 - <span class="track label-red">Sala Ada Lovelace</span>'
       - name: '12:00 - <span class="track label-cyan">Sala Mary Jackson</span>'
       - name: '12:00 - <span class="track label-aqua-marine">Sala Katherine Johnson</span>'
 
@@ -147,8 +147,8 @@ agenda:
       - name: '14:30 - <span class="track label-cyan">Sala Mary Jackson</span>'
       - name: '14:30 - <span class="track label-aqua-marine">Sala Katherine Johnson</span>'
       - name: '14:50 - <span class="track label-pink">Sala Grace Hooper</span>'
-      - name: '15:00 - <span class="track label-purple">Sala Dorothy Vaughan</span>'
-      - name: '15:05 - <span class="track label-red">Sala Ada Lovelace</span>'
+      - name: '14:50 - <span class="track label-purple">Sala Dorothy Vaughan</span>'
+      - name: '14:55 - <span class="track label-red">Sala Ada Lovelace</span>'
 
   - hour: '16:00'
     tracks:
