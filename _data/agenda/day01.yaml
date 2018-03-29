@@ -41,7 +41,7 @@ agenda:
 
   - hour: '09:40'
     tracks:
-      - name: 'Keynote'
+      - name: 'Além do MVC: Testando Unitariamente Apps Django'
         speaker: 'Bernardo Fontes'
         tags:
           - track-ada

@@ -79,7 +79,7 @@ agenda:
 
   - hour: '10:20'
     tracks:
-      - name: 'Keynote'
+      - name: 'Vida freela: como decolar com a sua carreira de dev freelancer'
         speaker: 'Paula Grangeiro'
         tags:
           - track-ada
