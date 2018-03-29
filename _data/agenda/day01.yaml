@@ -85,8 +85,9 @@ agenda:
 
   - hour: '10:55'
     tracks:
-      - name: 'Palestra a definir'
-        speaker: 'Palestrante a definir'
+      - name: 'Programando a Felicidade'
+        speaker: 'Renzo Nuccitelli'
+        link: 'https://speakerfight.com/events/python-sudeste-2018-palestras/#programando-a-felicidade-2'
         tags:
           - track-grace
           - palestra

@@ -181,9 +181,9 @@ agenda:
 
   - hour: '15:45'
     tracks:
-      - name: 'Programando a Felicidade'
+      - name: 'Python Birds: Aprenda Orientação a Objetos implementando o jogo Angry Birds'
         speaker: 'Renzo Nuccitelli'
-        link: 'https://speakerfight.com/events/python-sudeste-2018-palestras/#programando-a-felicidade-2'
+        link: 'https://speakerfight.com/events/python-sudeste-2018-palestras/#python-birds-aprenda-orientacao-a-objetos-implementando-o-jogo-angry-birds'
         tags:
           - track-dorothy
           - palestra
