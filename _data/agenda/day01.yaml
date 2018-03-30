@@ -180,8 +180,8 @@ agenda:
 
   - hour: '16:00'
     tracks:
-      - name: 'Anatomia de uma arquitetura data-centred'
-        speaker: 'Robson Júnior'
+      - name: 'Arquitetura de projetos Flask'
+        speaker: 'Bruno Rocha'
         tags:
           - track-grace
           - palestra
