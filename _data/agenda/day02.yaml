@@ -5,7 +5,7 @@ header: Palestras e Tutoriais
 description: Palestras de 35 a 50 minutos e tutoriais com tempos variados, com palestrantes renomados da comunidade.
 place_name: BandTec Digital School
 place_link: https://goo.gl/FgJHvA
-is_active: false
+is_active: true
 
 agenda:
   - hour: '08:00'
