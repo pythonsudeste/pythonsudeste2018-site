@@ -15,8 +15,8 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.2 2405546, 2018-03-11"
-   sodipodi:docname="programacao_named_bw.svg"
-   inkscape:export-filename="programacao_named_bw.png"
+   sodipodi:docname="agenda_pyse2018_bw.svg"
+   inkscape:export-filename="agenda_pyse2018_bw.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96">
   <defs
@@ -29,8 +29,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.979899"
-     inkscape:cx="801.91382"
-     inkscape:cy="1736.3756"
+     inkscape:cx="1404.9749"
+     inkscape:cy="360.54784"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -8725,7 +8725,7 @@
          y="375.79883"
          x="169.46864"
          id="tspan2296-9"
-         sodipodi:role="line">Luis Cavalcanti</tspan></text>
+         sodipodi:role="line">Luiz Cavalcanti</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
@@ -10385,7 +10385,7 @@
            y="676.13159"
            x="274.74564"
            id="tspan2562-1-3-6-33-3-1-0"
-           sodipodi:role="line">Bot Command - Automatizando tarefas</tspan></text>
+           sodipodi:role="line">Python Birds:</tspan></text>
       <text
          xml:space="preserve"
          style="font-style:normal;font-weight:normal;font-size:2.82222223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
@@ -10396,7 +10396,7 @@
            id="tspan3644-9-3-4"
            x="274.74564"
            y="678.97589"
-           style="font-size:2.82222223px;stroke-width:0.26458332">utilizando Python + Django + Telegram!</tspan></text>
+           style="font-size:2.82222223px;stroke-width:0.26458332">Aprenda Orientação a Objetos</tspan></text>
       <text
          id="text3650-0-7-4"
          y="681.82013"
@@ -10407,7 +10407,7 @@
            y="681.82013"
            x="274.74564"
            id="tspan3648-2-72-4"
-           sodipodi:role="line">(ChatBot, Web)</tspan></text>
+           sodipodi:role="line">implementando o jogo Angry Birds</tspan></text>
     </g>
     <g
        id="g3848"
