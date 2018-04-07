@@ -154,8 +154,8 @@ agenda:
 
   - hour: '15:00'
     tracks:
-      - name: 'Provisionamento multi-nuvens com libcloud'
-        speaker: 'Jean Oliveira Rodrigues'
+      - name: 'Funtores e funtores aplicativos'
+        speaker: 'Eduardo Mendes'
         duration: '2 horas e 20 minutos'
         tags:
           - track-mary

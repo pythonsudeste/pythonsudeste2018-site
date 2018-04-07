@@ -1491,9 +1491,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="1203.5884"
-     inkscape:cy="167.35538"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="1599.989"
+     inkscape:cy="918.51193"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -1503,8 +1503,8 @@
      inkscape:snap-bbox="true"
      inkscape:bbox-nodes="true"
      inkscape:window-width="1920"
-     inkscape:window-height="1031"
-     inkscape:window-x="0"
+     inkscape:window-height="1057"
+     inkscape:window-x="1920"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
      fit-margin-top="0"
@@ -12833,25 +12833,20 @@
       </g>
       <text
          id="text4191-1"
-         y="673.00128"
+         y="679.90363"
          x="380.04123"
          style="font-style:normal;font-weight:normal;font-size:6.3499999px;line-height:7px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
          xml:space="preserve"><tspan
-           id="tspan4565"
            style="font-size:6.3499999px;line-height:7px;stroke-width:0.26458332"
-           y="673.00128"
-           x="380.04123"
-           sodipodi:role="line">Provisionamento</tspan><tspan
-           style="font-size:6.3499999px;line-height:7px;stroke-width:0.26458332"
-           y="680.00128"
+           y="679.90363"
            x="380.04123"
            sodipodi:role="line"
-           id="tspan3193">multi-nuvens</tspan><tspan
+           id="tspan3195">Funtores e</tspan><tspan
            style="font-size:6.3499999px;line-height:7px;stroke-width:0.26458332"
-           y="687.00128"
+           y="686.90363"
            x="380.04123"
            sodipodi:role="line"
-           id="tspan3195">com libcloud</tspan></text>
+           id="tspan3012">funtores aplicativos</tspan></text>
       <g
          transform="translate(7.9922057,555.81433)"
          id="g4658-3">
@@ -12895,7 +12890,7 @@
            id="tspan3048"
            x="379.56866"
            y="702.62573"
-           style="font-size:5.64444447px;stroke-width:0.26458332">Jean Oliveira Rodrigues</tspan></text>
+           style="font-size:5.64444447px;stroke-width:0.26458332">Eduardo Mendes</tspan></text>
     </g>
   </g>
 </svg>
