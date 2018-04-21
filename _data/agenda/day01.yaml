@@ -77,7 +77,7 @@ agenda:
   - hour: '10:50'
     tracks:
       - name: 'Hackeando o setor público com Python'
-        speaker: 'Eduardo Spanó, Vitor Hirota, Jessika Darambaris'
+        speaker: 'Eduardo Spanó, Vitor Hirota, Ludimila Bela Cruz'
         link: 'https://speakerfight.com/events/python-sudeste-2018-palestras/#hackeando-o-setor-publico-com-python'
         tags:
           - track-ada
