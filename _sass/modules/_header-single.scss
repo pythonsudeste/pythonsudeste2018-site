@@ -1,0 +1,16 @@
+.header-single {
+  position: relative;
+  padding: 0 0 0.5em 0;
+  background-color: rgba(49, 132, 222, 0.71);
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    @include background("../images/sampa.jpg", cover, center bottom);
+    z-index: -1;
+  }
+}
