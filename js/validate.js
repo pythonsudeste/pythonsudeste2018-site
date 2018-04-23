@@ -82,6 +82,17 @@ function capitalizeName(name){
              .join(" ");
 };
 
+function nameObject(name){
+  var nameArray = capitalizeName(
+                  lowerNormalize(name)
+                  .replace(/[^A-Za-z ]/g, "")
+                ).split(" ");
+  return {
+    first: nameArray[0],
+    surname: nameArray.slice(1).join(" ")
+  };
+};
+
 function getCode(){
   return document.getElementById("certs-code")
                  .value
@@ -122,5 +133,31 @@ function getDuration(category, code, name){
 };
 
 function getPTKEntry(category, code, name, duration){
-  return {title: "Verifique na agenda! &lt;Não implementado&gt;"}; // Stub
+  var choices = [];
+  for(var ptkEntry of titlesPTK[category]){
+    var choice = nameObject(ptkEntry.name);
+    choice.title = ptkEntry.title;
+    if(category === "TUTORIAL") choice.duration = ptkEntry.duration;
+    choices.push(choice);
+  };
+
+  var options = {scorer: customFuzzScorer};
+  var query = nameObject(name);
+  if(category === "TUTORIAL") query.duration = duration;
+  var results = fuzzball.extract(query, choices, options);
+
+  if(results[1][1] > 99){ // Ambiguity!
+    var s = sha3_224(code + "-PALESTRA");
+    if((results[1][0].title.length > results[0][0].title.length) !==
+       (s.charAt(3) < s.charAt(11)))
+      return results[1][0];
+  };
+
+  return results[0][0];
+};
+
+function customFuzzScorer(query, choice, options){
+  if(query.duration !== choice.duration) return 0;
+  return .8 * fuzzball.ratio(query.first, choice.first, options)
+       + .2 * fuzzball.token_set_ratio(query.surname, choice.surname, options);
 };
