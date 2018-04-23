@@ -32,3 +32,31 @@
 <script src="js/sha3.js"></script>
 <script src="js/validate.js"></script>
 <script src="js/hashes.js"></script>
+
+<script language="JavaScript">
+var titlesPTK = {};
+{% assign categories = "palestra tutorial keynote" | split: " " %}
+{% for category in categories %}
+  titlesPTK.{{ category | upcase }} = [];
+{% endfor %}
+{% for day_file in site.data.agenda.active_days %}
+  {% assign day = site.data.agenda | map: day_file %}
+  {% for agenda in day.first.agenda %}
+    {% for track in agenda.tracks %}
+      {% assign speakers = track.speaker | split: "," %}
+      {% for speaker in speakers %}
+        {% if categories contains track.tags[-1] %}
+          {% assign category = track.tags[-1] | upcase %}
+            titlesPTK.{{ category }}.push({
+              {% if category == "TUTORIAL" %}
+                duration: '{{ track.duration }}'.replace(/\s*\(.*/, ""),
+              {% endif %}
+              title: '{{ track.name }}',
+              name: '{{ speaker | lstrip }}'
+            });
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  {% endfor %}
+{% endfor %}
+</script>
