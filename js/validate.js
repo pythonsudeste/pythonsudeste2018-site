@@ -27,18 +27,36 @@ document.addEventListener("DOMContentLoaded", function(){
           "</ul>"
         ].join(""),
       ].join("<br>"), "#ffaaaa");
-    } else
+    } else {
+
+      var duration = getDuration(category, code, name);
+      var categoryText = categoryElement.selectedOptions[0].textContent;
+
+      var textArray = [
+        "<ul>",
+          "<li>Nome: ", capitalizeName(name),
+          "<li>Código: ", code,
+          "<li>Categoria: ", categoryText,
+          "<li>Duração: ", duration
+      ];
+
+      if(!["O", "C"].includes(category.charAt(0))){
+        var ptkEntry = getPTKEntry(category, code, name, duration);
+        textArray.push(
+          "<li>Título d", category.charAt(0) === "T" ? "o " : "a ",
+                          categoryText.split(" ")[2],
+                          ": ",
+          ptkEntry.title
+        );
+      };
+
+      textArray.push("</ul>");
+
       showResult([
         "Certificado válido!", "",
-        [
-          "<ul>",
-            "<li>Nome: ", capitalizeName(name),
-            "<li>Código: ", code,
-            "<li>Categoria: ", categoryElement.selectedOptions[0].textContent,
-            "<li>Duração: ", getDuration(category, code, name),
-          "</ul>"
-        ].join(""),
+        textArray.join(""),
       ].join("<br>"), "#aaffaa");
+    };
   });
 });
 
@@ -101,4 +119,8 @@ function getDuration(category, code, name){
           return "3 horas";
       };
   };
+};
+
+function getPTKEntry(category, code, name, duration){
+  return {title: "Verifique na agenda! &lt;Não implementado&gt;"}; // Stub
 };
