@@ -11,7 +11,8 @@ document.addEventListener("DOMContentLoaded", function(){
       return;
     };
 
-    var category = document.getElementById("certs-category").value;
+    var categoryElement = document.getElementById("certs-category");
+    var category = categoryElement.value;
     var name = getName();
     var msg = buildMessage(category, code, name);
     var hash = sha3_224(msg);
@@ -26,7 +27,17 @@ document.addEventListener("DOMContentLoaded", function(){
           "</ul>"
         ].join(""),
       ].join("<br>"), "#ffaaaa");
-    } else showResult("Certificado válido!", "#aaffaa");
+    } else
+      showResult([
+        "Certificado válido!", "",
+        [
+          "<ul>",
+            "<li>Nome: ", capitalizeName(name),
+            "<li>Código: ", code,
+            "<li>Categoria: ", categoryElement.selectedOptions[0].textContent,
+          "</ul>"
+        ].join(""),
+      ].join("<br>"), "#aaffaa");
   });
 });
 
@@ -40,6 +51,16 @@ function lowerNormalize(name){
 
 function getName(){
   return lowerNormalize(document.getElementById("certs-name").value);
+};
+
+function capitalizeName(name){
+  return name.split(" ")
+             .map(function(ch){
+                    return ["da", "de", "do", "dos", "von"].includes(ch)
+                           ? ch
+                           : ch.charAt(0).toUpperCase() + ch.slice(1);
+                  })
+             .join(" ");
 };
 
 function getCode(){
