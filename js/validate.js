@@ -52,8 +52,10 @@ document.addEventListener("DOMContentLoaded", function(){
         if(ptkEntry.speakers){
           textArray.push("<li>Atividade realizada em conjunto com: ");
           var extraSpeakers = [];
-          for(var rawSpeaker of ptkEntry.speakers.split(",")){
-            var speaker = nameObject(rawSpeaker.trim());
+          var rawSpeakers = ptkEntry.speakers.split(",");
+          for(var rsIdx = 0; rsIdx < rawSpeakers.length; rsIdx++){
+            var rawSpeaker = rawSpeakers[rsIdx].trim();
+            var speaker = nameObject(rawSpeaker);
             if((speaker.first !== ptkEntry.first) ||
                (speaker.surname !== ptkEntry.surname))
               extraSpeakers.push(rawSpeaker);
@@ -115,7 +117,7 @@ function getCode(){
 };
 
 function buildMessage(category, code, name){
-  return `2018/Python-${category}_${code}_${name}-Sudeste`;
+  return ["2018/Python-", category, "_", code, "_", name, "-Sudeste"].join("");
 };
 
 function showResult(data, color){
@@ -148,7 +150,9 @@ function getDuration(category, code, name){
 
 function getPTKEntry(category, code, name, duration){
   var choices = [];
-  for(var ptkEntry of titlesPTK[category]){
+  var ptkEntries = titlesPTK[category];
+  for(var ptkEntryIdx = 0; ptkEntryIdx < ptkEntries.length; ptkEntryIdx++){
+    var ptkEntry = ptkEntries[ptkEntryIdx];
     var choice = nameObject(ptkEntry.name);
     choice.title = ptkEntry.title;
     if(category === "TUTORIAL") choice.duration = ptkEntry.duration;
