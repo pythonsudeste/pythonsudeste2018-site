@@ -2,8 +2,8 @@
 title: Python Sudeste 2018
 email: eventos@pythonsudeste.org
 description: > # this means to ignore newlines until "baseurl:"
-  Conferência Nacional Python organizada pela comunidade da região Sudeste. 2 dias de
-  Tutoriais, palestras sobre a linguagem Python.
+  Conferência Nacional Python organizada pela comunidade da região Sudeste. 3 dias de
+  tutoriais e palestras sobre a linguagem Python.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://pythonsudeste.org" # the base hostname & protocol for your site
 twitter_username: jekyllrb
