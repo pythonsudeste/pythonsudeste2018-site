@@ -1,0 +1,78 @@
+.certs {
+  background-color: #f8f8fa;
+
+  &:after {
+    display: block;
+    content: "";
+    position: relative;
+    padding: 1em;
+    margin: 0;
+    background-color: #2769b1;
+  }
+
+  .info {
+    position: relative;
+    padding: 5em 0 4em 0;
+    @include background("../images/sampa.jpg", cover, center bottom);
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: rgba(49, 132, 222, 0.71);
+    }
+  }
+
+  .row {
+    padding-bottom: 1em;
+  }
+
+  .fields {
+    max-width: 400px;
+    input, select, button {
+      margin-bottom: 1em;
+    }
+  }
+
+  .result {
+    max-width: 600px;
+  }
+
+  #certs-result {
+    padding: 1em;
+    color: #ccf;
+    background-color: #333;
+
+    ul {
+      padding: 0 1em;
+    }
+  }
+
+  h1 {
+    color: #333;
+    text-align: center;
+    padding-top: 0.25em;
+    font-size: 3.5em;
+    font-family: "Helvetica", sans-serif;
+    font-weight: bold;
+  }
+
+  h2 {
+    color: #333;
+    text-align: center;
+    font-size: 2em;
+    margin-top: .5em;
+    margin-bottom: .2em;
+    font-family: "Helvetica", sans-serif;
+    font-weight: bold;
+  }
+
+  p {
+    color: #333;
+    text-align: center;
+  }
+
+}
