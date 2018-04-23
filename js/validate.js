@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function(){
             "<li>Nome: ", capitalizeName(name),
             "<li>Código: ", code,
             "<li>Categoria: ", categoryElement.selectedOptions[0].textContent,
+            "<li>Duração: ", getDuration(category, code, name),
           "</ul>"
         ].join(""),
       ].join("<br>"), "#aaffaa");
@@ -78,4 +79,26 @@ function showResult(data, color){
   var node = document.getElementById("certs-result");
   node.innerHTML = data;
   node.style.color = color;
+};
+
+function getDuration(category, code, name){
+  switch(category){
+    case "ORG":
+    case "ORGCORE":
+    case "COMUM": return "22 horas";
+    case "PALESTRA": return "45 minutos";
+    case "KEYNOTE": return "1 hora";
+    default: // Tutorial
+      if(name.toLowerCase().charAt(0) === "d") return "6 horas e 50 minutos";
+      switch(name.length){
+        case 13: return "3 horas e 20 minutos";
+        case 14: return "6 horas";
+        case 15:
+        case 22: return "4 horas";
+        default: // Ambiguity!
+          var s = sha3_224("TUTORIAL-" + code);
+          if(s.charAt(3) < s.charAt(11)) return "2 horas e 20 minutos";
+          return "3 horas";
+      };
+  };
 };
