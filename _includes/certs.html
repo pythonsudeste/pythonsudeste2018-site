@@ -49,6 +49,9 @@ var titlesPTK = {};
         {% if categories contains track.tags[-1] %}
           {% assign category = track.tags[-1] | upcase %}
             titlesPTK.{{ category }}.push({
+              {% if speaker != track.speaker %}
+                speakers: '{{ track.speaker }}',
+              {% endif %}
               {% if category == "TUTORIAL" %}
                 duration: '{{ track.duration }}'.replace(/\s*\(.*/, ""),
               {% endif %}

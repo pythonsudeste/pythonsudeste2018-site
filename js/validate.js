@@ -48,6 +48,20 @@ document.addEventListener("DOMContentLoaded", function(){
                           ": ",
           ptkEntry.title
         );
+
+        if(ptkEntry.speakers){
+          textArray.push("<li>Atividade realizada em conjunto com: ");
+          var extraSpeakers = [];
+          for(var rawSpeaker of ptkEntry.speakers.split(",")){
+            var speaker = nameObject(rawSpeaker.trim());
+            if((speaker.first !== ptkEntry.first) ||
+               (speaker.surname !== ptkEntry.surname))
+              extraSpeakers.push(rawSpeaker);
+          };
+          textArray.push(extraSpeakers.length === 1 ? extraSpeakers[0] :
+            [extraSpeakers.slice(0, -1).join(", "),
+             extraSpeakers.slice(-1)[0]].join(" e "));
+        };
       };
 
       textArray.push("</ul>");
@@ -138,6 +152,7 @@ function getPTKEntry(category, code, name, duration){
     var choice = nameObject(ptkEntry.name);
     choice.title = ptkEntry.title;
     if(category === "TUTORIAL") choice.duration = ptkEntry.duration;
+    choice.speakers = ptkEntry.speakers;
     choices.push(choice);
   };
 
