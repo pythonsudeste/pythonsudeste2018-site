@@ -1,0 +1,16 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body>
+    <div class="main">
+      {% include header-single.html %}
+      {% include {{page.main-content}}.html %}
+    </div>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

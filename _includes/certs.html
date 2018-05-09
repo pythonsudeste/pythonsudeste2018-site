@@ -1,0 +1,61 @@
+<section class="certs">
+
+  <div class="row">
+    <h1>Validação de certificados</h1>
+    <p>Sistema de verificação da validade dos certificados
+    emitidos para quem participou da Python Sudeste 2018</p>
+  </div>
+
+  <div class="row fields">
+    <h2>Dados do certificado</h2>
+    Nome completo da pessoa como consta no certificado:<br>
+    <input id="certs-name" type="text"><br>
+    Código de validação:<br>
+    <input id="certs-code" type="text"><br>
+    Categoria/tipo do certificado:<br>
+    <select id="certs-category">
+      {% for cpair in site.data.certs_categories %}
+        <option value="{{ cpair.category }}">{{ cpair.text }}</option>
+      {% endfor %}
+    </select><br>
+    <button id="certs-verify">Verificar</button>
+  </div>
+
+  <div class="row result">
+    <h2>Resultado da verificação</h2>
+    <div id="certs-result">
+      Para validar, preencha os dados e clique no botão
+    </div>
+  </div>
+</section>
+
+<script language="JavaScript">
+var titlesPTK = {};
+{% assign categories = "palestra tutorial keynote" | split: " " %}
+{% for category in categories %}
+  titlesPTK.{{ category | upcase }} = [];
+{% endfor %}
+{% for day_file in site.data.agenda.active_days %}
+  {% assign day = site.data.agenda | map: day_file %}
+  {% for agenda in day.first.agenda %}
+    {% for track in agenda.tracks %}
+      {% assign speakers = track.speaker | split: "," %}
+      {% for speaker in speakers %}
+        {% if categories contains track.tags[-1] %}
+          {% assign category = track.tags[-1] | upcase %}
+            titlesPTK.{{ category }}.push({
+              {% if speaker != track.speaker %}
+                speakers: '{{ track.speaker }}',
+              {% endif %}
+              {% if category == "TUTORIAL" %}
+                duration: '{{ track.duration }}'.replace(/\s*\(.*/, ""),
+              {% endif %}
+              title: '{{ track.name }}',
+              name: '{{ speaker | lstrip }}'
+            });
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  {% endfor %}
+{% endfor %}
+</script>
